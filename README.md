@@ -175,7 +175,7 @@ Only perform this if this is the first time you will setup your Git Environment
 9. Output with Formatting (String)
    - Use `System.out.printf()` to display the value of userString. Use `%s` as the format specifier for strings.
    ```Java
-   SSystem.out.printf("Your string: %s%n", userString);
+   System.out.printf("Your string: %s%n", userString);
    ```
 
 10. Close the Scanner
