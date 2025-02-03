@@ -93,9 +93,9 @@ Only perform this if this is the first time you will setup your Git Environment
    - `printf()`:  Displays formatted output to the console.  It uses format specifiers (like `%d`, `%.2f`, `%s`) to control how the output is displayed.  It's very useful for creating neatly formatted tables and reports.  It also allows you to keep the cursor on the same line (like `print`) if you don't include a newline character (`%n`).
 
    **Java Programming Best Practices:**
-- Use descriptive variable names (e.g., studentAge instead of just age).
-- Follow Java naming conventions (camelCase for variables: studentAge, itemPrice).
-- Add comments to your code to explain what it does (we haven't added many here, but it's a good habit to get into!).
+   - Use descriptive variable names (e.g., studentAge instead of just age).
+   - Follow Java naming conventions (camelCase for variables: studentAge, itemPrice).
+   - Add comments to your code to explain what it does (we haven't added many here, but it's a good habit to get into!).
       
 **Step-by-Step Instructions:**
 
