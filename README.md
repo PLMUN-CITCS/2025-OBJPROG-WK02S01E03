@@ -97,97 +97,97 @@ Only perform this if this is the first time you will setup your Git Environment
 - Follow Java naming conventions (camelCase for variables: studentAge, itemPrice).
 - Add comments to your code to explain what it does (we haven't added many here, but it's a good habit to get into!).
       
-   **Step-by-Step Instructions:**
+**Step-by-Step Instructions:**
 
-   1. Import the Scanner Class
-      - Create a file named `InputOutputDemo.java`.
-      - At the very top of your file (before the class declaration), import the `Scanner` class.  This allows you to get input from the user.
-      ```Java
-      import java.util.Scanner;
-      ```
+1. Import the Scanner Class
+   - Create a file named `InputOutputDemo.java`.
+   - At the very top of your file (before the class declaration), import the `Scanner` class.  This allows you to get input from the user.
+   ```Java
+   import java.util.Scanner;
+   ```
 
-   2. Class and Main Method
-      - Create the class `InputOutputDemo` and its `main` method.
-      ```Java
-      public class InputOutputDemo {
-          public static void main(String[] args) {
-      
-          }
-      }
-      ```
-            
-   3. Create a Scanner Object
-      - Inside the main method, create a Scanner object.  This object will be used to read user input from the console.
-      ```Java
-      Scanner input = new Scanner(System.in);
-      ```
+2. Class and Main Method
+   - Create the class `InputOutputDemo` and its `main` method.
+   ```Java
+   public class InputOutputDemo {
+       public static void main(String[] args) {
+   
+       }
+   }
+   ```
+         
+3. Create a Scanner Object
+   - Inside the main method, create a Scanner object.  This object will be used to read user input from the console.
+   ```Java
+   Scanner input = new Scanner(System.in);
+   ```
 
-   4. Prompt for and Input an Integer
-      - Use `System.out.print()` to display a message prompting the user to enter an integer.  `print` keeps the cursor on the same line.
-      ```Java
-      System.out.print("Enter an integer: ");
-      ```
-      
-      - Use the `nextInt()` method of the `Scanner` object to read the integer entered by the user and store it in an integer variable named `userInt`.
-      ```Java
-      int userInt = input.nextInt();
-      ```
+4. Prompt for and Input an Integer
+   - Use `System.out.print()` to display a message prompting the user to enter an integer.  `print` keeps the cursor on the same line.
+   ```Java
+   System.out.print("Enter an integer: ");
+   ```
+   
+   - Use the `nextInt()` method of the `Scanner` object to read the integer entered by the user and store it in an integer variable named `userInt`.
+   ```Java
+   int userInt = input.nextInt();
+   ```
 
-   5. Prompt for and Input a Double
-      - Use `System.out.print()` to prompt the user to enter a decimal number (a double).
-      ```Java
-      System.out.print("Enter a decimal number: ");
-      ```
-      
-      - Use the `nextDouble()` method of the `Scanner` object to read the double and store it in a double variable named `userDouble`.
-      ```Java
-      double userDouble = input.nextDouble();
-      ```
+5. Prompt for and Input a Double
+   - Use `System.out.print()` to prompt the user to enter a decimal number (a double).
+   ```Java
+   System.out.print("Enter a decimal number: ");
+   ```
+   
+   - Use the `nextDouble()` method of the `Scanner` object to read the double and store it in a double variable named `userDouble`.
+   ```Java
+   double userDouble = input.nextDouble();
+   ```
 
-   6. Consume Newline and Prompt for a String
-      - After reading a number (integer or double), there's often a leftover newline character in the input buffer. This can cause issues when reading a string next.  So, `add input.nextLine();` to consume this leftover newline.
-      ```Java
-      input.nextLine(); // Consume newline
-      ```
-      
-      - Use `System.out.print()` to prompt the user to enter a word or sentence (a string).
-      ```Java
-      System.out.print("Enter a word or sentence: ");
-      ```
-      
-      - Use the `nextLine()` method of the `Scanner` object to read the entire line of text (including spaces) entered by the user and store it in a String variable named `userString`.
-      ```Java
-      String userString = input.nextLine();
-      ```
+6. Consume Newline and Prompt for a String
+   - After reading a number (integer or double), there's often a leftover newline character in the input buffer. This can cause issues when reading a string next.  So, `add input.nextLine();` to consume this leftover newline.
+   ```Java
+   input.nextLine(); // Consume newline
+   ```
+   
+   - Use `System.out.print()` to prompt the user to enter a word or sentence (a string).
+   ```Java
+   System.out.print("Enter a word or sentence: ");
+   ```
+   
+   - Use the `nextLine()` method of the `Scanner` object to read the entire line of text (including spaces) entered by the user and store it in a String variable named `userString`.
+   ```Java
+   String userString = input.nextLine();
+   ```
 
-   7. Output with Formatting (Integer)
-      - Use `System.out.printf()` to display the value of `userInt` with a formatted label.  Use `%d` as the format specifier for integers. `%n` adds a newline.
-      ```Java
-      System.out.printf("Your integer: %d%n", userInt);
-      ```
+7. Output with Formatting (Integer)
+   - Use `System.out.printf()` to display the value of `userInt` with a formatted label.  Use `%d` as the format specifier for integers. `%n` adds a newline.
+   ```Java
+   System.out.printf("Your integer: %d%n", userInt);
+   ```
 
-   8. Output with Formatting (Double)
-      - Use `System.out.printf()` to display the value of userDouble. Use `%.2f` to format the double to two decimal places.
-      ```Java
-      System.out.printf("Your decimal number: %.2f%n", userDouble);
-      ```
+8. Output with Formatting (Double)
+   - Use `System.out.printf()` to display the value of userDouble. Use `%.2f` to format the double to two decimal places.
+   ```Java
+   System.out.printf("Your decimal number: %.2f%n", userDouble);
+   ```
 
-   9. Output with Formatting (String)
-      - Use `System.out.printf()` to display the value of userString. Use `%s` as the format specifier for strings.
-      ```Java
-      SSystem.out.printf("Your string: %s%n", userString);
-      ```
+9. Output with Formatting (String)
+   - Use `System.out.printf()` to display the value of userString. Use `%s` as the format specifier for strings.
+   ```Java
+   SSystem.out.printf("Your string: %s%n", userString);
+   ```
 
-   10. Close the Scanner
-      - It's good practice to close the `Scanner` object when you're finished with it to release system resources.
-      ```Java
-      input.close();
-      ```
+10. Close the Scanner
+   - It's good practice to close the `Scanner` object when you're finished with it to release system resources.
+   ```Java
+   input.close();
+   ```
 
-   11. Compile and Run
-      - Save the file as `InputOutputDemo.java`.
-      - Compile: `javac InputOutputDemo.java`
-      - Run: `java InputOutputDemo`
+11. Compile and Run
+   - Save the file as `InputOutputDemo.java`.
+   - Compile: `javac InputOutputDemo.java`
+   - Run: `java InputOutputDemo`
 
 ### **Step 4: Push Changes to GitHub**
 Once you've completed your changes, follow these steps to upload your work to your GitHub repository.
