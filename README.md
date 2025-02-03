@@ -1,7 +1,7 @@
 2025-OBJPROG-WK02S01E03
 Week 02 - Introduction to Java Programming
 
-Exercise # 02 - Guided Coding Exercise: Input and Output with Text Formatting
+Exercise # 03 - Guided Coding Exercise: Input and Output with Text Formatting
 
 ## **Instructions**
 
@@ -77,7 +77,7 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Exercise # 02 - Guided Coding Exercise: Input and Output with Text Formatting**
+**Exercise # 03 - Guided Coding Exercise: Input and Output with Text Formatting**
 
    **Objective:**
    - Learn to use input (via the Scanner class) and output statements.
