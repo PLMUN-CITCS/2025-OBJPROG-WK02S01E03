@@ -1,7 +1,7 @@
-2025-OBJPROG-WK02S0E02
+2025-OBJPROG-WK02S01E03
 Week 02 - Introduction to Java Programming
 
-Exercise # 02 - Guided Coding Exercise: Variable Declarations & Case-Sensitivity
+Exercise # 02 - Guided Coding Exercise: Input and Output with Text Formatting
 
 ## **Instructions**
 
@@ -77,17 +77,20 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Exercise # 02 - Guided Coding Exercise: Variable Declarations & Case-Sensitivity**
+**Exercise # 02 - Guided Coding Exercise: Input and Output with Text Formatting**
 
    **Objective:**
-   - Create variables with different native data types (integers, decimals, strings).
-   - Understand the importance of case-sensitivity in identifiers.
+   - Learn to use input (via the Scanner class) and output statements.
+   - Apply text formatting when displaying numbers, decimals, and strings.
+   - Understand the differences between print, println, and printf.
 
    **File Naming Convention:**
-   - `VariablesAndCaseSensitivity.java`
+   - `InputOutputDemo.java`
 
    **Notable Observations (to be discussed after completing the exercise):**
-   - Observe the output. Notice how counter and Counter have different values, proving that Java is case-sensitive.
+   - `print()`: Displays output to the console, but the cursor stays on the same line after the output.  Subsequent output will appear immediately after the previous output.
+   - `println()`: Displays output to the console, and then moves the cursor to the next line.  This is the most commonly used output method.
+   - `printf()`:  Displays formatted output to the console.  It uses format specifiers (like `%d`, `%.2f`, `%s`) to control how the output is displayed.  It's very useful for creating neatly formatted tables and reports.  It also allows you to keep the cursor on the same line (like `print`) if you don't include a newline character (`%n`).
 
    **Java Programming Best Practices:**
 - Use descriptive variable names (e.g., studentAge instead of just age).
@@ -96,77 +99,95 @@ Only perform this if this is the first time you will setup your Git Environment
       
    **Step-by-Step Instructions:**
 
-   1. Class and Main Method
-      - Create a file named `VariablesAndCaseSensitivity`.java.
-      - Define the class `VariablesAndCaseSensitivity`.
-      - Inside the class, define the `main` method.  This is where your program starts running.
+   1. Import the Scanner Class
+      - Create a file named `InputOutputDemo.java`.
+      - At the very top of your file (before the class declaration), import the `Scanner` class.  This allows you to get input from the user.
       ```Java
-      public class VariablesAndCaseSensitivity {
+      import java.util.Scanner;
+      ```
+
+   2. Class and Main Method
+      - Create the class `InputOutputDemo` and its `main` method.
+      ```Java
+      public class InputOutputDemo {
           public static void main(String[] args) {
       
           }
       }
       ```
-      
-   2. Declare an Integer Variable
-      - Inside the `main` method, declare an integer variable named `studentAge` and initialize it with a whole number (e.g., 15).
-      ```Java
-      int studentAge = 15;
-      ```
             
-   3. Declare a Double Variable
-      - Below the `studentAge` declaration, declare a double variable named `itemPrice` and initialize it with a decimal number (e.g., 29.99).
+   3. Create a Scanner Object
+      - Inside the main method, create a Scanner object.  This object will be used to read user input from the console.
       ```Java
-      double itemPrice = 29.99;
+      Scanner input = new Scanner(System.in);
       ```
 
-   4. Declare a String Variable
-      - Below the `itemPrice` declaration, declare a String variable named `studentName` and initialize it with a name (e.g., "Alice").  Remember that Strings are enclosed in double quotes.
+   4. Prompt for and Input an Integer
+      - Use `System.out.print()` to display a message prompting the user to enter an integer.  `print` keeps the cursor on the same line.
       ```Java
-      String studentName = "Alice";
+      System.out.print("Enter an integer: ");
+      ```
+      
+      - Use the `nextInt()` method of the `Scanner` object to read the integer entered by the user and store it in an integer variable named `userInt`.
+      ```Java
+      int userInt = input.nextInt();
       ```
 
-   5. Demonstrate Case Sensitivity (Variable 1)
-      - Declare an integer variable named `counter` and initialize it with a number (e.g., 10).
+   5. Prompt for and Input a Double
+      - Use `System.out.print()` to prompt the user to enter a decimal number (a double).
       ```Java
-      int counter = 10;
+      System.out.print("Enter a decimal number: ");
+      ```
+      
+      - Use the `nextDouble()` method of the `Scanner` object to read the double and store it in a double variable named `userDouble`.
+      ```Java
+      double userDouble = input.nextDouble();
       ```
 
-   6. Demonstrate Case Sensitivity (Variable 2)
-      - Declare another integer variable named `Counter` (notice the capital 'C'). Initialize it with a different number (e.g., 20).
+   6. Consume Newline and Prompt for a String
+      - After reading a number (integer or double), there's often a leftover newline character in the input buffer. This can cause issues when reading a string next.  So, `add input.nextLine();` to consume this leftover newline.
       ```Java
-      int Counter = 20;
+      input.nextLine(); // Consume newline
+      ```
+      
+      - Use `System.out.print()` to prompt the user to enter a word or sentence (a string).
+      ```Java
+      System.out.print("Enter a word or sentence: ");
+      ```
+      
+      - Use the `nextLine()` method of the `Scanner` object to read the entire line of text (including spaces) entered by the user and store it in a String variable named `userString`.
+      ```Java
+      String userString = input.nextLine();
       ```
 
-   7. Output the Values (Age)
-      - Use `System.out.println()` to display the value of the `studentAge` variable along with a descriptive label (e.g., "Student Age: ").
+   7. Output with Formatting (Integer)
+      - Use `System.out.printf()` to display the value of `userInt` with a formatted label.  Use `%d` as the format specifier for integers. `%n` adds a newline.
       ```Java
-      System.out.println("Student Age: " + studentAge);
+      System.out.printf("Your integer: %d%n", userInt);
       ```
 
-   8. Output the Values (Price)
-      - Use `System.out.println()` to display the value of the `itemPrice` variable with a label (e.g., "Item Price: $").
+   8. Output with Formatting (Double)
+      - Use `System.out.printf()` to display the value of userDouble. Use `%.2f` to format the double to two decimal places.
       ```Java
-      System.out.println("Item Price: $" + itemPrice);
+      System.out.printf("Your decimal number: %.2f%n", userDouble);
       ```
 
-   9. Output the Values (Name)
-      - Use `System.out.println()` to display the value of the `studentName` variable with a label (e.g., "Student Name: ").
+   9. Output with Formatting (String)
+      - Use `System.out.printf()` to display the value of userString. Use `%s` as the format specifier for strings.
       ```Java
-      System.out.println("Student Name: " + studentName);
+      SSystem.out.printf("Your string: %s%n", userString);
       ```
 
-   10. Output Case Sensitivity Variables
-      - Use `System.out.println()` to display the value of both `counter` and `Counter` variables, each with its own label. This will demonstrate that Java treats them as two distinct variables.
+   10. Close the Scanner
+      - It's good practice to close the `Scanner` object when you're finished with it to release system resources.
       ```Java
-      System.out.println("Counter: " + counter);
-      System.out.println("Counter (Different Case): " + Counter);
+      input.close();
       ```
 
    11. Compile and Run
-      - Save the file as `VariablesAndCaseSensitivity.java`.
-      - Compile the code using `javac VariablesAndCaseSensitivity.java` in your terminal or command prompt.
-      - Run the compiled code using `java VariablesAndCaseSensitivity`.
+      - Save the file as `InputOutputDemo.java`.
+      - Compile: `javac InputOutputDemo.java`
+      - Run: `java InputOutputDemo`
 
 ### **Step 4: Push Changes to GitHub**
 Once you've completed your changes, follow these steps to upload your work to your GitHub repository.
@@ -190,7 +211,7 @@ Once you've completed your changes, follow these steps to upload your work to yo
    Write a meaningful commit message:
    
    ```bash
-   git commit -m "Submitting OBJPROG Week 02 - Session 01 - Exercise 02"
+   git commit -m "Submitting OBJPROG Week 02 - Session 01 - Exercise 03"
    ```
    
 4. Push your changes to GitHub:
