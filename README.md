@@ -1,7 +1,7 @@
-2025-OBJPROG-WK02S01E03
+2025-OBJPROG-WK02S0E02
 Week 02 - Introduction to Java Programming
 
-Exercise # 03 - Guided Coding Exercise: Input and Output with Text Formatting
+Exercise # 03 - Guided Coding Exercise: Arithmetic Operators and Operator Precedence
 
 ## **Instructions**
 
@@ -77,117 +77,112 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Exercise # 03 - Guided Coding Exercise: Input and Output with Text Formatting**
+**Exercise # 03 - Guided Coding Exercise: Arithmetic Operators and Operator Precedence**
 
    **Objective:**
-   - Learn to use input (via the Scanner class) and output statements.
-   - Apply text formatting when displaying numbers, decimals, and strings.
-   - Understand the differences between print, println, and printf.
+   - Apply arithmetic operators in Java.
+   - Understand operator precedence with step-by-step calculation.
 
    **File Naming Convention:**
-   - `InputOutputDemo.java`
+   - `ArithmeticDemo.java`
 
    **Notable Observations (to be discussed after completing the exercise):**
    - `print()`: Displays output to the console, but the cursor stays on the same line after the output.  Subsequent output will appear immediately after the previous output.
    - `println()`: Displays output to the console, and then moves the cursor to the next line.  This is the most commonly used output method.
    - `printf()`:  Displays formatted output to the console.  It uses format specifiers (like `%d`, `%.2f`, `%s`) to control how the output is displayed.  It's very useful for creating neatly formatted tables and reports.  It also allows you to keep the cursor on the same line (like `print`) if you don't include a newline character (`%n`).
-
-   **Java Programming Best Practices:**
-   - Use descriptive variable names (e.g., studentAge instead of just age).
-   - Follow Java naming conventions (camelCase for variables: studentAge, itemPrice).
-   - Add comments to your code to explain what it does (we haven't added many here, but it's a good habit to get into!).
       
-**Step-by-Step Instructions:**
+   **Step-by-Step Instructions:**
 
-1. Import the Scanner Class
-   - Create a file named `InputOutputDemo.java`.
-   - At the very top of your file (before the class declaration), import the `Scanner` class.  This allows you to get input from the user.
-   ```Java
-   import java.util.Scanner;
-   ```
+   1. Class and Main Method
+      - Create a file named `ArithmeticDemo.java`.
+      - Define the class `ArithmeticDemo` and its main method.
+      ```Java
+      public class ArithmeticDemo {
+          public static void main(String[] args) {
+      
+          }
+      }
+      ```
+      
+   2. Declare and Initialize Integer Variables
+      - Inside the `main` method, declare two integer variables, `num1` and `num2`.
+      - Initialize `num1` with the value 10.
+      - Initialize `num2` with the value 5.
+      ```Java
+      int num1 = 10;
+      int num2 = 5;
+      ```
+            
+   3. Declare and Initialize a Double Variable
+      - Declare a double variable named `num3`.
+      - Initialize `num3` with the value 3.0.
+      ```Java
+      double num3 = 3.0;
+      ```
 
-2. Class and Main Method
-   - Create the class `InputOutputDemo` and its `main` method.
-   ```Java
-   public class InputOutputDemo {
-       public static void main(String[] args) {
-   
-       }
-   }
-   ```
-         
-3. Create a Scanner Object
-   - Inside the main method, create a Scanner object.  This object will be used to read user input from the console.
-   ```Java
-   Scanner input = new Scanner(System.in);
-   ```
+   4. Perform Addition
+      - Declare an integer variable named `sum`.
+      - Calculate the sum of `num1` and `num2` and store the result in `sum`.
+      ```Java
+      int sum = num1 + num2;
+      ```
 
-4. Prompt for and Input an Integer
-   - Use `System.out.print()` to display a message prompting the user to enter an integer.  `print` keeps the cursor on the same line.
-   ```Java
-   System.out.print("Enter an integer: ");
-   ```
-   
-   - Use the `nextInt()` method of the `Scanner` object to read the integer entered by the user and store it in an integer variable named `userInt`.
-   ```Java
-   int userInt = input.nextInt();
-   ```
+   5. Perform Subtraction
+      - Declare an integer variable named `difference`.
+      - Calculate the difference between `num1` and `num2` and store the result in `difference`.
+      ```Java
+      int difference = num1 - num2;
+      ```
+      
+      - Use the `nextDouble()` method of the `Scanner` object to read the double and store it in a double variable named `userDouble`.
+      ```Java
+      double userDouble = input.nextDouble();
+      ```
 
-5. Prompt for and Input a Double
-   - Use `System.out.print()` to prompt the user to enter a decimal number (a double).
-   ```Java
-   System.out.print("Enter a decimal number: ");
-   ```
-   
-   - Use the `nextDouble()` method of the `Scanner` object to read the double and store it in a double variable named `userDouble`.
-   ```Java
-   double userDouble = input.nextDouble();
-   ```
+   6. Perform Multiplication
+      - Declare an integer variable named `product`.
+      - Calculate the product of `num1` and `num2` and store the result in `product`.
+      ```Java
+      int product = num1 * num2;
+      ```
 
-6. Consume Newline and Prompt for a String
-   - After reading a number (integer or double), there's often a leftover newline character in the input buffer. This can cause issues when reading a string next.  So, `add input.nextLine();` to consume this leftover newline.
-   ```Java
-   input.nextLine(); // Consume newline
-   ```
-   
-   - Use `System.out.print()` to prompt the user to enter a word or sentence (a string).
-   ```Java
-   System.out.print("Enter a word or sentence: ");
-   ```
-   
-   - Use the `nextLine()` method of the `Scanner` object to read the entire line of text (including spaces) entered by the user and store it in a String variable named `userString`.
-   ```Java
-   String userString = input.nextLine();
-   ```
+   7. Perform Integer Division
+      - Declare an integer variable named `quotient`.
+      - Calculate the integer division of `num1` by `num2` and store the result in `quotient`.  (Remember, integer division truncates any decimal part).
+      ```Java
+      int quotient = num1 / num2;
+      ```
 
-7. Output with Formatting (Integer)
-   - Use `System.out.printf()` to display the value of `userInt` with a formatted label.  Use `%d` as the format specifier for integers. `%n` adds a newline.
-   ```Java
-   System.out.printf("Your integer: %d%n", userInt);
-   ```
+   8. Perform Modulus Operation
+      - Declare an integer variable named `remainder`.
+      - Calculate the remainder of the division of `num1` by `num2` (using the modulus operator `%`) and store the result in `remainder`.
+      ```Java
+      int remainder = num1 % num2;
+      ```
 
-8. Output with Formatting (Double)
-   - Use `System.out.printf()` to display the value of userDouble. Use `%.2f` to format the double to two decimal places.
-   ```Java
-   System.out.printf("Your decimal number: %.2f%n", userDouble);
-   ```
+   9. Demonstrate Operator Precedence
+      - Declare an integer variable named `expressionResult`.
+      - Calculate the result of the following expression and store it in `expressionResult: num1 + num2 * 2 - (num1 / num2)`.  Pay attention to the order of operations (multiplication and division before addition and subtraction). The parentheses enforce the division to happen first.
+      ```Java
+      int expressionResult = num1 + num2 * 2 - (num1 / num2);
+      ```
 
-9. Output with Formatting (String)
-   - Use `System.out.printf()` to display the value of userString. Use `%s` as the format specifier for strings.
-   ```Java
-   System.out.printf("Your string: %s%n", userString);
-   ```
+   10. Output the Results
+      - Use `System.out.println()` to print the value of `sum` with a descriptive label (e.g., "Sum: ").
+      - Do the same for `difference`, `product`, `quotient`, `remainder`, and `expressionResult`.  Make sure each output has a clear label.  For the expressionResult, explain the order of operations used in the calculation in a comment.
+      ```Java
+      System.out.println("Sum: " + sum);
+      System.out.println("Difference: " + difference);
+      System.out.println("Product: " + product);
+      System.out.println("Quotient: " + quotient);
+      System.out.println("Remainder: " + remainder);
+      System.out.println("Expression Result: " + expressionResult); // Explain order of operations
+      ```
 
-10. Close the Scanner
-   - It's good practice to close the `Scanner` object when you're finished with it to release system resources.
-   ```Java
-   input.close();
-   ```
-
-11. Compile and Run
-   - Save the file as `InputOutputDemo.java`.
-   - Compile: `javac InputOutputDemo.java`
-   - Run: `java InputOutputDemo`
+   11. Compile and Run
+      - Save the file as `ArithmeticDemo.java`.
+      - Compile the code using `javac ArithmeticDemo.java` in your terminal or command prompt.
+      - Run the compiled code using `java ArithmeticDemo`.
 
 ### **Step 4: Push Changes to GitHub**
 Once you've completed your changes, follow these steps to upload your work to your GitHub repository.
