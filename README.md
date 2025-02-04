@@ -165,6 +165,7 @@ Only perform this if this is the first time you will setup your Git Environment
    10. Output the Results
       - Use `System.out.println()` to print the value of `sum` with a descriptive label (e.g., "Sum: ").
       - Do the same for `difference`, `product`, `quotient`, `remainder`, and `expressionResult`.  Make sure each output has a clear label.  For the expressionResult, explain the order of operations used in the calculation in a comment.
+
 ```Java
 System.out.println("Sum: " + sum);
 System.out.println("Difference: " + difference);
@@ -175,6 +176,7 @@ System.out.println("Expression Result: " + expressionResult); // Explain order o
 ```
 
    11. Compile and Run
+
       - Save the file as `ArithmeticDemo.java`.
       - Compile the code using `javac ArithmeticDemo.java` in your terminal or command prompt.
       - Run the compiled code using `java ArithmeticDemo`.
