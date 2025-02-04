@@ -82,15 +82,15 @@ Only perform this if this is the first time you will setup your Git Environment
    **Objective:**
    - Apply arithmetic operators in Java.
    - Understand operator precedence with step-by-step calculation.
-   
+
    **Desired Output:**
    ```txt
-   Enter an integer: 5
-   Enter a decimal number: 10
-   Enter a word or sentence: This is a String
-   Your integer: 5
-   Your decimal number: 10.00
-   Your string: This is a String
+   Sum: 15
+   Difference: 5
+   Product: 50
+   Quotient: 2
+   Remainder: 0
+   Expression Result: 18
    ```
 
    **File Naming Convention:**
