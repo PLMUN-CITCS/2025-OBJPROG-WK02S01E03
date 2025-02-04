@@ -133,11 +133,6 @@ Only perform this if this is the first time you will setup your Git Environment
       ```Java
       int difference = num1 - num2;
       ```
-      
-      - Use the `nextDouble()` method of the `Scanner` object to read the double and store it in a double variable named `userDouble`.
-      ```Java
-      double userDouble = input.nextDouble();
-      ```
 
    6. Perform Multiplication
       - Declare an integer variable named `product`.
@@ -170,14 +165,14 @@ Only perform this if this is the first time you will setup your Git Environment
    10. Output the Results
       - Use `System.out.println()` to print the value of `sum` with a descriptive label (e.g., "Sum: ").
       - Do the same for `difference`, `product`, `quotient`, `remainder`, and `expressionResult`.  Make sure each output has a clear label.  For the expressionResult, explain the order of operations used in the calculation in a comment.
-      ```Java
-      System.out.println("Sum: " + sum);
-      System.out.println("Difference: " + difference);
-      System.out.println("Product: " + product);
-      System.out.println("Quotient: " + quotient);
-      System.out.println("Remainder: " + remainder);
-      System.out.println("Expression Result: " + expressionResult); // Explain order of operations
-      ```
+```Java
+System.out.println("Sum: " + sum);
+System.out.println("Difference: " + difference);
+System.out.println("Product: " + product);
+System.out.println("Quotient: " + quotient);
+System.out.println("Remainder: " + remainder);
+System.out.println("Expression Result: " + expressionResult); // Explain order of operations
+```
 
    11. Compile and Run
       - Save the file as `ArithmeticDemo.java`.
