@@ -1,7 +1,7 @@
-2025-OBJPROG-WK02S0E02
+# **2025-OBJPROG-LAB004**
 Week 02 - Introduction to Java Programming
 
-Exercise # 03 - Guided Coding Exercise: Arithmetic Operators and Operator Precedence
+Laboratory # 04 - Guided Coding Exercise: Arithmetic Operators and Operator Precedence
 
 ## **Instructions**
 
@@ -77,7 +77,7 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Exercise # 03 - Guided Coding Exercise: Arithmetic Operators and Operator Precedence**
+**Laboratory # 04 - Guided Coding Exercise: Arithmetic Operators and Operator Precedence**
 
    **Objective:**
    - Apply arithmetic operators in Java.
@@ -97,10 +97,22 @@ Only perform this if this is the first time you will setup your Git Environment
    - `ArithmeticDemo.java`
 
    **Notable Observations (to be discussed after completing the exercise):**
-   - `print()`: Displays output to the console, but the cursor stays on the same line after the output.  Subsequent output will appear immediately after the previous output.
-   - `println()`: Displays output to the console, and then moves the cursor to the next line.  This is the most commonly used output method.
-   - `printf()`:  Displays formatted output to the console.  It uses format specifiers (like `%d`, `%.2f`, `%s`) to control how the output is displayed.  It's very useful for creating neatly formatted tables and reports.  It also allows you to keep the cursor on the same line (like `print`) if you don't include a newline character (`%n`).
-      
+   - Arithmetic Operators: The activity provides hands-on practice with the basic arithmetic operators: + (addition), - (subtraction), * (multiplication), / (division), and % (modulus).
+   - Operator Precedence: The key observation is the demonstration of operator precedence. The example expression (num1 + num2 * 2 - (num1 / num2)) forces students to think about the order in which operations are performed.
+   - Integer vs. Double: The activity uses integers for most calculations, but it also introduces a double. This is a good opportunity to discuss the difference between integer and floating-point arithmetic.
+   - Modulus Operator: The inclusion of the modulus operator is important, as it's a commonly used operator that students might not be as familiar with as the others.
+   - Step-by-Step Calculation: The instructions implicitly encourage students to perform a step-by-step calculation of the example expression to understand how operator precedence works. This is a valuable learning process.
+
+   **Java Best Practices**
+   - Declare Variables Before Use: Always declare your variables (int num1, int sum, etc.) before you try to use them.
+   - Initialize Variables: It's good practice to initialize variables when you declare them (e.g., int num1 = 10;). This prevents potential issues with uninitialized variables.
+   - Use Meaningful Variable Names: Use names that describe the purpose of the variable (e.g., sum, difference, product).
+   - Understand Operator Precedence: Java follows standard operator precedence rules (like PEMDAS/BODMAS). Multiplication and division happen before addition and subtraction. Use parentheses () to enforce a specific order of operations if needed. This is very important for getting the correct results.
+   - Integer Division: Be aware that integer division truncates (discards) the decimal part. If you need a more precise result, use double or float data types.
+   - Modulus Operator: The modulus operator (%) gives you the remainder of a division. It's useful in many situations (e.g., checking if a number is even or odd).
+   - Comments for Complex Expressions: If you have a complex expression, add a comment to explain the order of operations. This makes your code easier to understand.
+   - Output with Labels: When you print results, always include clear labels to identify what each value represents (e.g., "Sum: " + sum). This makes the output much more user-friendly.
+   
    **Step-by-Step Instructions:**
 
    1. Class and Main Method
